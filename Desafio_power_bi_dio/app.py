@@ -11,15 +11,10 @@ st.markdown("Replicando o desafio da DIO usando Python e Streamlit")
 # 1. Carregar os dados
 @st.cache_data
 def load_data():
-    # Carrega o CSV que você subiu
-    df = pd.read_csv("Financial Sample.xlsx - Sheet1.csv")
-    # Garante que as colunas numéricas estão corretas
-    cols_to_fix = ['Sales', 'Profit', 'Units Sold']
-    # Na linha 18, mude para:
-    df = pd.read_excel("Financial Sample.xlsx - Sheet1.csv") # O pandas vai entender que é Excel mesmo com esse nome
-
-
+    # Adicionamos o sep=';' para o padrão do Excel brasileiro
+    df = pd.read_csv("dados.csv", sep=';') 
     return df
+
 
 df = load_data()
 
