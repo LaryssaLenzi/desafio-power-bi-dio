@@ -11,8 +11,17 @@ st.markdown("Replicando o desafio da DIO usando Python e Streamlit")
 # 1. Carregar os dados
 @st.cache_data
 def load_data():
-    # Adicionamos o sep=';' para o padrão do Excel brasileiro
-    df = pd.read_csv("dados.csv", sep=';') 
+    # Forçamos a leitura como Excel, pois o arquivo no seu GitHub é um .xlsx renomeado
+    df = pd.read_excel("dados.csv")
+    
+    # Padronizando os nomes das colunas (remove espaços e garante que fiquem iguais ao código)
+    df.columns = [c.strip() for c in df.columns]
+    
+    # Garante que as colunas numéricas estão prontas para uso
+    for col in ['Sales', 'Profit', 'Units Sold']:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+            
     return df
 
 
