@@ -15,9 +15,10 @@ def load_data():
     df = pd.read_csv("Financial Sample.xlsx - Sheet1.csv")
     # Garante que as colunas numéricas estão corretas
     cols_to_fix = ['Sales', 'Profit', 'Units Sold']
-    for col in cols_to_fix:
-        if df[col].dtype == 'object':
-            df[col] = df[col].str.replace(',', '').astype(float)
+    # Na linha 18, mude para:
+    df = pd.read_excel("Financial Sample.xlsx - Sheet1.csv") # O pandas vai entender que é Excel mesmo com esse nome
+
+
     return df
 
 df = load_data()
