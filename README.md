@@ -4,7 +4,7 @@ Este projeto foi desenvolvido como parte do desafio da **DIO (Digital Innovation
 Devido a restrições de conta corporativa no Power BI, utilizei **Python** e **Streamlit** para criar uma aplicação web interativa que replica os visuais solicitados.
 
 ## 🚀 Acesse o Dashboard Online
-[CLIQUE AQUI PARA VISUALIZAR O DASHBOARD INTERATIVO](https://desafio-power-bi-dio-nmaw7ox4ncwgz5gaub5rt4.streamlit.app/)
+[CLIQUE AQUI PARA VISUALIZAR O DASHBOARD INTERATIVO](https://desafio-power-bi-dio.streamlit.app/)
 
 ## 🛠️ Tecnologias Utilizadas
 - **Python** (Processamento de dados)
